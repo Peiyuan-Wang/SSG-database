@@ -1,9 +1,13 @@
 """Exact Python queries and spin-crystal calculation, independent of the GUI."""
+from argparse import ArgumentParser
 from pathlib import Path
 from ssg_database.retrieval import SearchDatabase
 from ssg_enumeration.crystal import spin_crystal_class
 
-db=SearchDatabase(Path(__file__).parent/'output/retrieval/SSGclassify.sqlite')
+parser = ArgumentParser(description=__doc__)
+parser.add_argument('database', nargs='?', type=Path,
+    default=Path(__file__).parent / 'output/retrieval/SSGclassify.sqlite')
+db=SearchDatabase(parser.parse_args().database)
 result=db.search({'parent':4,'bravais':'mP','category':'P.1.2','k1':'0,1/3,0'})
 print('匹配数：',result['total'])
 for row in result['rows']:
