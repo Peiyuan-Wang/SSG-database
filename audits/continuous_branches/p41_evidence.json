@@ -1,0 +1,149 @@
+{
+  "group": "P41",
+  "number": 76,
+  "grading": "trivial",
+  "eta": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "chart_index": 16,
+  "chart_orbit": [
+    16
+  ],
+  "parameterization": "k=(0,0,4u), theta=(0,u,2u,3u), u in R/Z",
+  "spatial_generator_count": 4,
+  "normalizer_certificate": {
+    "invariant_metric_dimension": 2,
+    "method": "complete_invariant_metric_isometries",
+    "finite_order": 16,
+    "isometry_order": 48,
+    "ellipsoid_bounds": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "point_generator_count": 4,
+    "proper_point_generator_count": 3,
+    "extension_orbit_size": 1,
+    "schreier_edges_checked": 3,
+    "origin_kernel_components": 2,
+    "continuous_origin_dimension": 1,
+    "generator_count": 4,
+    "orientation": "det=+1",
+    "modded_out": "inner lattice translations and pointwise-central continuous origins",
+    "complete": true,
+    "algorithm": "3d_rational_blocks_and_finite_schreier_v1"
+  },
+  "relation_signs": [
+    -1,
+    1,
+    -1,
+    -1,
+    1,
+    1,
+    -1,
+    -1,
+    1
+  ],
+  "samples": [
+    {
+      "u": "1/16",
+      "k": [
+        "0",
+        "0",
+        "1/4"
+      ],
+      "theta": [
+        "0",
+        "1/16",
+        "1/8",
+        "3/16"
+      ]
+    },
+    {
+      "u": "5/16",
+      "k": [
+        "0",
+        "0",
+        "1/4"
+      ],
+      "theta": [
+        "0",
+        "5/16",
+        "5/8",
+        "15/16"
+      ]
+    }
+  ],
+  "point_equivalence": {
+    "status": "distinct",
+    "reason": "Exhausted the exact finite point orbit."
+  },
+  "nonzero_k": {
+    "excluded_u": [
+      "0",
+      "1/4",
+      "1/2",
+      "3/4"
+    ],
+    "components": 4,
+    "component_orbits_under_sign": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "general_chart": {
+    "excluded_u": [
+      "0",
+      "1/8",
+      "1/4",
+      "3/8",
+      "1/2",
+      "5/8",
+      "3/4",
+      "7/8"
+    ],
+    "components": 8,
+    "component_orbits_under_sign": [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "current_family_count": 1
+  },
+  "p21_unpunctured_cover_degree": 2,
+  "implementation_sha256": "52f5e217b0d2410d7f47c5ae1232f78cdea2484c829c721264915868e9e96ffc"
+}

@@ -1,0 +1,19 @@
+{
+  "naming_version": "1.1",
+  "catalogue": "full_export_230_20261029",
+  "class_count": 67475,
+  "chart_count": 206288,
+  "parent_count": 230,
+  "unique_names": true,
+  "exact_all_section_roundtrip": true,
+  "symbolic_family_check": true,
+  "all_chart_aliases_checked": true,
+  "generator_relations_checked": true,
+  "name_record_name_roundtrip": true,
+  "liu_seitz_origin_transforms_checked": 230,
+  "public_parser_validation_count": 67475,
+  "record_category_roundtrip_count": 67475,
+  "chart_alias_checks": 206288,
+  "continuous_family_count": 8520,
+  "source_sha256": "f4846d0a8d3a752b9a07f1dfb6241e63715bcbc36ebbeaabcdcc7416b6a3c543"
+}

@@ -1,0 +1,20 @@
+name: Package verification
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install package with parent-space-group data support
+        run: python -m pip install '.[database]'
+      - name: Verify all modules
+        run: python -m unittest discover -s tests -v
+      - name: Run the import example
+        run: python example.py

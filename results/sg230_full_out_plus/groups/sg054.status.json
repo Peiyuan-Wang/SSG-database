@@ -1,0 +1,52 @@
+{
+  "number": 54,
+  "status": "complete",
+  "seconds": 32.682,
+  "modules": [
+    {
+      "module": "complete_spatial_automorphisms",
+      "count": 10,
+      "seconds": 0.434
+    },
+    {
+      "module": "gradings",
+      "count": 16,
+      "seconds": 0.465
+    },
+    {
+      "module": "noncoplanar_type0",
+      "count": 15,
+      "seconds": 0.95
+    },
+    {
+      "module": "noncoplanar_type1",
+      "count": 56,
+      "seconds": 1.724
+    },
+    {
+      "module": "noncoplanar_type2",
+      "count": 0,
+      "seconds": 1.823
+    },
+    {
+      "module": "coplanar_type0",
+      "count": 36,
+      "seconds": 2.22
+    },
+    {
+      "module": "coplanar_type1",
+      "count": 56,
+      "seconds": 2.439
+    },
+    {
+      "module": "coplanar_type2",
+      "count": 64,
+      "seconds": 4.23
+    },
+    {
+      "module": "quotient_and_labels",
+      "count": 808,
+      "seconds": 32.666
+    }
+  ]
+}

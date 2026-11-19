@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ssg-enumeration"
+version = "0.9.17"
+description = "Exact enumeration, classification and naming of spin space groups"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["sympy>=1.14,<1.15"]
+
+[project.optional-dependencies]
+database = ["spglib>=2.7,<3"]
+
+[tool.setuptools]
+packages = ["ssg_enumeration"]
+
+[tool.setuptools.package-data]
+ssg_enumeration = ["data/*.json.gz"]

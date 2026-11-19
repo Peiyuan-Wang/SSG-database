@@ -1,0 +1,165 @@
+{
+  "number": 68,
+  "international_short": "Ccce",
+  "hall_number": 322,
+  "hall_symbol": "C 2 2 -1ac",
+  "setting_choice": "1",
+  "point_group": "mmm",
+  "point_order": 8,
+  "conventional_operation_count": 16,
+  "centering_index": 2,
+  "primitive_basis": [
+    [
+      "1",
+      "1/2",
+      "0"
+    ],
+    [
+      "0",
+      "1/2",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1"
+    ]
+  ],
+  "input_sha256": "d5624869a951f112d330aa4b7fa0cebd265ab5b768b67511b703ef5fb91a3c7d",
+  "parent_source": "spglib.get_symmetry_from_database",
+  "spglib_version": "2.7.0",
+  "status": "complete",
+  "spatial_scope": "full_out_plus",
+  "verified": true,
+  "normalizer_certificate": {
+    "invariant_metric_dimension": 3,
+    "method": "primitive_eigenline_permutations",
+    "finite_order": 16,
+    "point_generator_count": 3,
+    "proper_point_generator_count": 3,
+    "extension_orbit_size": 1,
+    "schreier_edges_checked": 3,
+    "origin_kernel_components": 4,
+    "continuous_origin_dimension": 0,
+    "generator_count": 6,
+    "orientation": "det=+1",
+    "modded_out": "inner lattice translations and pointwise-central continuous origins",
+    "complete": true,
+    "algorithm": "3d_rational_blocks_and_finite_schreier_v1"
+  },
+  "spin_chart_count": 1240,
+  "continuous_family_convention": "one punctured parameter domain, regardless of connected components",
+  "package_version": "0.2.0",
+  "implementation_sha256": "52f5e217b0d2410d7f47c5ae1232f78cdea2484c829c721264915868e9e96ffc",
+  "seconds": 20.416,
+  "modules": [
+    {
+      "module": "complete_spatial_automorphisms",
+      "count": 6,
+      "seconds": 0.33
+    },
+    {
+      "module": "gradings",
+      "count": 16,
+      "seconds": 0.345
+    },
+    {
+      "module": "noncoplanar_type0",
+      "count": 15,
+      "seconds": 0.827
+    },
+    {
+      "module": "noncoplanar_type1",
+      "count": 52,
+      "seconds": 1.553
+    },
+    {
+      "module": "noncoplanar_type2",
+      "count": 0,
+      "seconds": 1.597
+    },
+    {
+      "module": "coplanar_type0",
+      "count": 36,
+      "seconds": 1.988
+    },
+    {
+      "module": "coplanar_type1",
+      "count": 52,
+      "seconds": 2.193
+    },
+    {
+      "module": "coplanar_type2",
+      "count": 64,
+      "seconds": 3.833
+    },
+    {
+      "module": "quotient_and_labels",
+      "count": 672,
+      "seconds": 20.403
+    }
+  ],
+  "L": 10,
+  "P": 88,
+  "N": 574,
+  "total": 672,
+  "discrete_count": 560,
+  "continuous_family_count": 112,
+  "labels": {
+    "L.0.1": 6,
+    "L.0.2": 4,
+    "P.0": 24,
+    "P.1.1": 24,
+    "P.1.2": 8,
+    "P.2.1": 32,
+    "P.2.2": 0,
+    "N.0.1": 74,
+    "N.0.2": 60,
+    "N.1.1": 176,
+    "N.1.2": 56,
+    "N.1.3": 144,
+    "N.1.4": 16,
+    "N.1.5": 48,
+    "N.2.1": 0,
+    "N.2.2": 0,
+    "N.2.3": 0
+  },
+  "discrete_labels": {
+    "L.0.1": 6,
+    "L.0.2": 4,
+    "P.0": 24,
+    "P.1.1": 24,
+    "P.1.2": 0,
+    "P.2.1": 32,
+    "P.2.2": 0,
+    "N.0.1": 74,
+    "N.0.2": 60,
+    "N.1.1": 176,
+    "N.1.2": 0,
+    "N.1.3": 144,
+    "N.1.4": 16,
+    "N.1.5": 0,
+    "N.2.1": 0,
+    "N.2.2": 0,
+    "N.2.3": 0
+  },
+  "continuous_labels": {
+    "L.0.1": 0,
+    "L.0.2": 0,
+    "P.0": 0,
+    "P.1.1": 0,
+    "P.1.2": 8,
+    "P.2.1": 0,
+    "P.2.2": 0,
+    "N.0.1": 0,
+    "N.0.2": 0,
+    "N.1.1": 0,
+    "N.1.2": 56,
+    "N.1.3": 0,
+    "N.1.4": 0,
+    "N.1.5": 48,
+    "N.2.1": 0,
+    "N.2.2": 0,
+    "N.2.3": 0
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "number": 78,
+  "seconds": 0.11667345900000115,
+  "expected": 57,
+  "matched": 57,
+  "unique_orbits": 57,
+  "collisions": {},
+  "failures": [],
+  "rows": [
+    {
+      "xiao_label": "L78.1.1",
+      "orbit": 0
+    },
+    {
+      "xiao_label": "L78.2.1",
+      "orbit": 1
+    },
+    {
+      "xiao_label": "L78.2.2",
+      "orbit": 2
+    },
+    {
+      "xiao_label": "P78.1.1",
+      "orbit": 42
+    },
+    {
+      "xiao_label": "P78.2.1",
+      "orbit": 45
+    },
+    {
+      "xiao_label": "P78.2.2",
+      "orbit": 54
+    },
+    {
+      "xiao_label": "P78.3.1",
+      "orbit": 44
+    },
+    {
+      "xiao_label": "P78.3.2",
+      "orbit": 55
+    },
+    {
+      "xiao_label": "P78.3.3",
+      "orbit": 50
+    },
+    {
+      "xiao_label": "P78.3.4",
+      "orbit": 53
+    },
+    {
+      "xiao_label": "P78.4.1",
+      "orbit": 43
+    },
+    {
+      "xiao_label": "P78.4.2",
+      "orbit": 48
+    },
+    {
+      "xiao_label": "P78.4.3",
+      "orbit": 47
+    },
+    {
+      "xiao_label": "P78.4.4",
+      "orbit": 52
+    },
+    {
+      "xiao_label": "P78.4.5",
+      "orbit": 51
+    },
+    {
+      "xiao_label": "P78.5.1",
+      "orbit": 46
+    },
+    {
+      "xiao_label": "P78.5.2",
+      "orbit": 49
+    },
+    {
+      "xiao_label": "P78.7.1",
+      "orbit": 56
+    },
+    {
+      "xiao_label": "N78.1.1",
+      "orbit": 9
+    },
+    {
+      "xiao_label": "N78.2.1",
+      "orbit": 7
+    },
+    {
+      "xiao_label": "N78.2.2",
+      "orbit": 26
+    },
+    {
+      "xiao_label": "N78.3.1",
+      "orbit": 6
+    },
+    {
+      "xiao_label": "N78.3.2",
+      "orbit": 37
+    },
+    {
+      "xiao_label": "N78.3.3",
+      "orbit": 24
+    },
+    {
+      "xiao_label": "N78.3.4",
+      "orbit": 36
+    },
+    {
+      "xiao_label": "N78.4.1",
+      "orbit": 3
+    },
+    {
+      "xiao_label": "N78.4.2",
+      "orbit": 18
+    },
+    {
+      "xiao_label": "N78.4.3",
+      "orbit": 15
+    },
+    {
+      "xiao_label": "N78.4.4",
+      "orbit": 32
+    },
+    {
+      "xiao_label": "N78.4.5",
+      "orbit": 28
+    },
+    {
+      "xiao_label": "N78.5.1",
+      "orbit": 12
+    },
+    {
+      "xiao_label": "N78.5.2",
+      "orbit": 21
+    },
+    {
+      "xiao_label": "N78.7.1",
+      "orbit": 41
+    },
+    {
+      "xiao_label": "N78.9.1",
+      "orbit": 10
+    },
+    {
+      "xiao_label": "N78.9.2",
+      "orbit": 27
+    },
+    {
+      "xiao_label": "N78.9.3",
+      "orbit": 25
+    },
+    {
+      "xiao_label": "N78.9.4",
+      "orbit": 35
+    },
+    {
+      "xiao_label": "N78.9.5",
+      "orbit": 11
+    },
+    {
+      "xiao_label": "N78.9.6",
+      "orbit": 8
+    },
+    {
+      "xiao_label": "N78.10.1",
+      "orbit": 4
+    },
+    {
+      "xiao_label": "N78.10.2",
+      "orbit": 16
+    },
+    {
+      "xiao_label": "N78.10.3",
+      "orbit": 19
+    },
+    {
+      "xiao_label": "N78.10.4",
+      "orbit": 33
+    },
+    {
+      "xiao_label": "N78.10.5",
+      "orbit": 29
+    },
+    {
+      "xiao_label": "N78.10.6",
+      "orbit": 34
+    },
+    {
+      "xiao_label": "N78.10.7",
+      "orbit": 31
+    },
+    {
+      "xiao_label": "N78.10.8",
+      "orbit": 30
+    },
+    {
+      "xiao_label": "N78.10.9",
+      "orbit": 5
+    },
+    {
+      "xiao_label": "N78.10.10",
+      "orbit": 20
+    },
+    {
+      "xiao_label": "N78.10.11",
+      "orbit": 17
+    },
+    {
+      "xiao_label": "N78.11.1",
+      "orbit": 13
+    },
+    {
+      "xiao_label": "N78.11.2",
+      "orbit": 22
+    },
+    {
+      "xiao_label": "N78.11.3",
+      "orbit": 23
+    },
+    {
+      "xiao_label": "N78.11.4",
+      "orbit": 14
+    },
+    {
+      "xiao_label": "N78.13.1",
+      "orbit": 40
+    },
+    {
+      "xiao_label": "N78.13.2",
+      "orbit": 39
+    },
+    {
+      "xiao_label": "N78.13.3",
+      "orbit": 38
+    }
+  ],
+  "origin_shift": [
+    "0",
+    "0",
+    "0"
+  ],
+  "second_parameter_checked": 8
+}

@@ -1,0 +1,70 @@
+test_binary_against_exhaustive (test_algebra.AlgebraTests) ... ok
+test_continuous_and_reparametrization (test_algebra.AlgebraTests) ... ok
+test_obstruction_and_torsion (test_algebra.AlgebraTests) ... ok
+test_row_lattice_not_rational_rowspace (test_algebra.AlgebraTests) ... ok
+test_smith_certificates (test_algebra.AlgebraTests) ... ok
+test_origin_shift_phase_and_grading (test_automorphisms.AutomorphismTests) ... ok
+test_p1_complete_generators (test_automorphisms.AutomorphismTests) ... ok
+test_reject_chirality_and_invalid_extension (test_automorphisms.AutomorphismTests) ... ok
+test_aggregation_and_csv (test_census.CensusTests) ... ok
+test_partial_never_claims_complete (test_census.CensusTests) ... ok
+test_component_orbits_under_spin_and_spatial_actions (test_continuous_branch_audit.ContinuousBranchAuditTests) ... ok
+test_full_representation_and_point_equivalence (test_continuous_branch_audit.ContinuousBranchAuditTests) ... ok
+test_p21_cover_retains_phase_sheet (test_continuous_branch_audit.ContinuousBranchAuditTests) ... ok
+test_all_relations (test_coplanar_labels.CoplanarTests) ... ok
+test_all_seventeen_labels (test_coplanar_labels.CoplanarTests) ... ok
+test_p1_21_v4_and_7_d1 (test_coplanar_labels.CoplanarTests) ... ok
+test_230_primitive_extensions (test_database.DatabaseTests) ... /Users/wpy/Desktop/AI/ai4s/software/paclet/_vendor/spglib/spg.py:514: DeprecationWarning: Set OLD_ERROR_HANDLING to false and catch the errors directly.
+  _set_no_error(_throw)
+/Users/wpy/Desktop/AI/ai4s/software/paclet/_vendor/spglib/spg.py:602: DeprecationWarning: Set OLD_ERROR_HANDLING to false and catch the errors directly.
+  _set_no_error()
+ok
+test_bad_setting (test_database.DatabaseTests) ... ok
+test_reference_examples (test_database.DatabaseTests) ... ok
+test_action_closure (test_deduplication.DeduplicationTests) ... ok
+test_continuous_points_are_not_family_labels (test_deduplication.DeduplicationTests) ... ok
+test_exact_irrational_spatial_witness (test_deduplication.DeduplicationTests) ... ok
+test_irrational_evaluation_and_unknown (test_deduplication.DeduplicationTests) ... ok
+test_no_false_complete_quotient (test_deduplication.DeduplicationTests) ... ok
+test_p1_full_outer_counts (test_deduplication.DeduplicationTests) ... ok
+test_rational_p1_invariant (test_deduplication.DeduplicationTests) ... ok
+test_special_loci_exact (test_deduplication.DeduplicationTests) ... ok
+test_all_grading_relations (test_groups_gradings.GroupGradingTests) ... ok
+test_expected_grading_counts (test_groups_gradings.GroupGradingTests) ... ok
+test_extension (test_groups_gradings.GroupGradingTests) ... ok
+test_reject_nonprimitive_and_float (test_groups_gradings.GroupGradingTests) ... ok
+test_type1_fixed_k_against_matrix_search (test_independent_enumeration.IndependentEnumerationTests) ... ok
+test_type2_direct_octahedral_search (test_independent_enumeration.IndependentEnumerationTests) ... ok
+test_centered_monoclinic_overlattice_and_extra_affine_maps (test_normalizers.NormalizerTests) ... ok
+test_extension_schreier_not_just_lifting_individual_generators (test_normalizers.NormalizerTests) ... ok
+test_finite_normalizer_orders_and_orientation_kernel (test_normalizers.NormalizerTests) ... ok
+test_full_p1_and_inversion_with_independent_origin_generators (test_normalizers.NormalizerTests) ... ok
+test_punctured_screw_family_counts_once (test_normalizers.NormalizerTests) ... ok
+test_unimodular_basis_change_has_no_small_entry_cutoff (test_normalizers.NormalizerTests) ... ok
+test_custom_input_and_progress (test_public_api.PublicApiTests) ... ok
+test_exports (test_public_api.PublicApiTests) ... ok
+test_json_export (test_public_api.PublicApiTests) ... ok
+test_catalog (test_type0.Type0Tests) ... ok
+test_full_multiplication (test_type0.Type0Tests) ... ok
+test_known_counts (test_type0.Type0Tests) ... ok
+test_small_bruteforce_kernels (test_type0.Type0Tests) ... ok
+test_h1_removes_gauge (test_type1.Type1Tests) ... ok
+test_nonorthogonal_reciprocal_basis (test_type1.Type1Tests) ... ok
+test_nonsymmorphic_obstruction (test_type1.Type1Tests) ... ok
+test_p1_continuum_and_boundaries (test_type1.Type1Tests) ... ok
+test_screw_monodromy (test_type1.Type1Tests) ... ok
+test_symbolic_all_relations (test_type1.Type1Tests) ... ok
+test_wavevector_to_parameters_preserves_sheets (test_type1.Type1Tests) ... ok
+test_all_defining_relations (test_type2.Type2Tests) ... ok
+test_global_conjugation (test_type2.Type2Tests) ... ok
+test_oriented_lift_is_homomorphism (test_type2.Type2Tests) ... ok
+test_p1_seven_kernels (test_type2.Type2Tests) ... ok
+test_exact_path_crosses_zero_without_breaking_joint_equations (test_zero_bridge_proof.ZeroBridgeProofTests) ... ok
+test_nonzero_trim_remains_separate (test_zero_bridge_proof.ZeroBridgeProofTests) ... ok
+test_same_wavevector_does_not_join_distinct_joint_components (test_zero_bridge_proof.ZeroBridgeProofTests) ... ok
+test_zero_is_a_separate_type0_member_not_a_generic_endpoint (test_zero_bridge_proof.ZeroBridgeProofTests) ... ok
+
+----------------------------------------------------------------------
+Ran 61 tests in 61.922s
+
+OK

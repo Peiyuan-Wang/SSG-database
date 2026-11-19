@@ -1,0 +1,10 @@
+{'group': 'P1', 'dimension': 'Noncoplanar', 'discrete_records': 15, 'independent_intertwiner_comparisons': 13, 'residual_duplicate_pairs': []}
+{'group': 'P1', 'dimension': 'Coplanar', 'discrete_records': 36, 'independent_intertwiner_comparisons': 12, 'residual_duplicate_pairs': []}
+{'group': 'P2', 'dimension': 'Noncoplanar', 'discrete_records': 51, 'independent_intertwiner_comparisons': 137, 'residual_duplicate_pairs': []}
+{'group': 'P2', 'dimension': 'Coplanar', 'discrete_records': 136, 'independent_intertwiner_comparisons': 100, 'residual_duplicate_pairs': []}
+{'group': 'P21', 'dimension': 'Noncoplanar', 'discrete_records': 19, 'independent_intertwiner_comparisons': 13, 'residual_duplicate_pairs': []}
+{'group': 'P21', 'dimension': 'Coplanar', 'discrete_records': 40, 'independent_intertwiner_comparisons': 12, 'residual_duplicate_pairs': []}
+{'group': 'P3', 'dimension': 'Noncoplanar', 'discrete_records': 5, 'independent_intertwiner_comparisons': 0, 'residual_duplicate_pairs': []}
+{'group': 'P3', 'dimension': 'Coplanar', 'discrete_records': 5, 'independent_intertwiner_comparisons': 0, 'residual_duplicate_pairs': []}
+Independent discrete spin audit: no duplicate pairs in these examples.
+P41: one current chart contains four general-domain components modulo spin inversion.

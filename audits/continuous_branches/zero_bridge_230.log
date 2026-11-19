@@ -1,0 +1,28 @@
+Checked 25 parents
+Checked 50 parents
+Checked 75 parents
+Checked 100 parents
+Checked 125 parents
+Checked 150 parents
+Checked 175 parents
+Checked 200 parents
+Checked 225 parents
+{
+  "scope": "all noncoplanar Type1 positive-dimensional charts before spatial quotient; coplanar uses the identical joint tori",
+  "completed_parents": 230,
+  "components": 1120,
+  "dimensions": {
+    "1": 1093,
+    "2": 25,
+    "3": 2
+  },
+  "cover_degrees": {
+    "1": 734,
+    "2": 354,
+    "3": 18,
+    "4": 10,
+    "6": 4
+  },
+  "seconds": 115.010109708,
+  "implementation_sha256": "52f5e217b0d2410d7f47c5ae1232f78cdea2484c829c721264915868e9e96ffc"
+}

@@ -1,0 +1,15 @@
+{
+  "audit_date": "2026-10-29",
+  "historical_total": 206288,
+  "historical_positive_dimensional_charts": 20506,
+  "valid_as_final_ssg_classification_count": false,
+  "full_space_group_automorphism_quotient_applied": false,
+  "connected_parameter_domain_decomposition_completed": false,
+  "homomorphism_validation_implies_deduplication_completeness": false,
+  "note": "Historical raw results are retained. Their arithmetic and homomorphism checks do not certify final classification counts. See audits/deduplication/REVIEW_ZH.md.",
+  "connected_parameter_domain_decomposition_required": false,
+  "continuous_family_convention": "User explicitly counts the whole punctured domain once; disconnected pieces are not separate families.",
+  "superseded_by": "../sg230_full_out_plus/summary.json",
+  "replacement_total": 67475,
+  "replacement_status": "complete"
+}

@@ -1,0 +1,47 @@
+{
+  "number": 84,
+  "status": "complete",
+  "seconds": 2.553,
+  "modules": [
+    {
+      "module": "gradings",
+      "count": 8,
+      "seconds": 0.173
+    },
+    {
+      "module": "noncoplanar_type0",
+      "count": 7,
+      "seconds": 0.442
+    },
+    {
+      "module": "noncoplanar_type1",
+      "count": 18,
+      "seconds": 0.771
+    },
+    {
+      "module": "noncoplanar_type2",
+      "count": 8,
+      "seconds": 1.139
+    },
+    {
+      "module": "coplanar_type0",
+      "count": 12,
+      "seconds": 1.301
+    },
+    {
+      "module": "coplanar_type1",
+      "count": 18,
+      "seconds": 1.372
+    },
+    {
+      "module": "coplanar_type2",
+      "count": 24,
+      "seconds": 2.047
+    },
+    {
+      "module": "quotient_and_labels",
+      "count": 326,
+      "seconds": 2.547
+    }
+  ]
+}

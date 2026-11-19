@@ -1,0 +1,142 @@
+{
+  "number": 86,
+  "international_short": "P4_2/n",
+  "hall_number": 361,
+  "hall_symbol": "P 4n -1n",
+  "setting_choice": "1",
+  "point_group": "4/m",
+  "point_order": 8,
+  "conventional_operation_count": 8,
+  "centering_index": 1,
+  "primitive_basis": [
+    [
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1"
+    ]
+  ],
+  "input_sha256": "75a896960ea4dc9391d273c18b8c30c045115834273c5136b1abdbfe6358e644",
+  "parent_source": "spglib.get_symmetry_from_database",
+  "spglib_version": "2.7.0",
+  "status": "complete",
+  "spatial_scope": "spin_only",
+  "verified": true,
+  "package_version": "0.1.0",
+  "implementation_sha256": "2e03591467f2ed06812bf6db40f03a37c0785afffca9bdcbec2f779f4adb559c",
+  "seconds": 2.029,
+  "modules": [
+    {
+      "module": "gradings",
+      "count": 8,
+      "seconds": 0.178
+    },
+    {
+      "module": "noncoplanar_type0",
+      "count": 7,
+      "seconds": 0.446
+    },
+    {
+      "module": "noncoplanar_type1",
+      "count": 18,
+      "seconds": 0.78
+    },
+    {
+      "module": "noncoplanar_type2",
+      "count": 0,
+      "seconds": 0.826
+    },
+    {
+      "module": "coplanar_type0",
+      "count": 12,
+      "seconds": 0.99
+    },
+    {
+      "module": "coplanar_type1",
+      "count": 18,
+      "seconds": 1.065
+    },
+    {
+      "module": "coplanar_type2",
+      "count": 16,
+      "seconds": 1.53
+    },
+    {
+      "module": "quotient_and_labels",
+      "count": 254,
+      "seconds": 2.023
+    }
+  ],
+  "L": 8,
+  "P": 46,
+  "N": 200,
+  "total": 254,
+  "discrete_count": 236,
+  "continuous_family_count": 18,
+  "labels": {
+    "L.0.1": 4,
+    "L.0.2": 4,
+    "P.0": 12,
+    "P.1.1": 16,
+    "P.1.2": 2,
+    "P.2.1": 16,
+    "P.2.2": 0,
+    "N.0.1": 28,
+    "N.0.2": 28,
+    "N.1.1": 64,
+    "N.1.2": 8,
+    "N.1.3": 48,
+    "N.1.4": 16,
+    "N.1.5": 8,
+    "N.2.1": 0,
+    "N.2.2": 0,
+    "N.2.3": 0
+  },
+  "discrete_labels": {
+    "L.0.1": 4,
+    "L.0.2": 4,
+    "P.0": 12,
+    "P.1.1": 16,
+    "P.1.2": 0,
+    "P.2.1": 16,
+    "P.2.2": 0,
+    "N.0.1": 28,
+    "N.0.2": 28,
+    "N.1.1": 64,
+    "N.1.2": 0,
+    "N.1.3": 48,
+    "N.1.4": 16,
+    "N.1.5": 0,
+    "N.2.1": 0,
+    "N.2.2": 0,
+    "N.2.3": 0
+  },
+  "continuous_labels": {
+    "L.0.1": 0,
+    "L.0.2": 0,
+    "P.0": 0,
+    "P.1.1": 0,
+    "P.1.2": 2,
+    "P.2.1": 0,
+    "P.2.2": 0,
+    "N.0.1": 0,
+    "N.0.2": 0,
+    "N.1.1": 0,
+    "N.1.2": 8,
+    "N.1.3": 0,
+    "N.1.4": 0,
+    "N.1.5": 8,
+    "N.2.1": 0,
+    "N.2.2": 0,
+    "N.2.3": 0
+  }
+}

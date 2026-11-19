@@ -1,0 +1,142 @@
+{
+  "number": 47,
+  "international_short": "Pmmm",
+  "hall_number": 227,
+  "hall_symbol": "-P 2 2",
+  "setting_choice": "",
+  "point_group": "mmm",
+  "point_order": 8,
+  "conventional_operation_count": 8,
+  "centering_index": 1,
+  "primitive_basis": [
+    [
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1"
+    ]
+  ],
+  "input_sha256": "62ced31b49194cd4638fc347a7522d2256605fc16252948c012a5e01bc28c102",
+  "parent_source": "spglib.get_symmetry_from_database",
+  "spglib_version": "2.7.0",
+  "status": "complete",
+  "spatial_scope": "spin_only",
+  "verified": true,
+  "package_version": "0.1.0",
+  "implementation_sha256": "2e03591467f2ed06812bf6db40f03a37c0785afffca9bdcbec2f779f4adb559c",
+  "seconds": 132.521,
+  "modules": [
+    {
+      "module": "gradings",
+      "count": 64,
+      "seconds": 0.184
+    },
+    {
+      "module": "noncoplanar_type0",
+      "count": 15,
+      "seconds": 0.719
+    },
+    {
+      "module": "noncoplanar_type1",
+      "count": 300,
+      "seconds": 3.499
+    },
+    {
+      "module": "noncoplanar_type2",
+      "count": 448,
+      "seconds": 20.06
+    },
+    {
+      "module": "coplanar_type0",
+      "count": 36,
+      "seconds": 20.522
+    },
+    {
+      "module": "coplanar_type1",
+      "count": 300,
+      "seconds": 21.673
+    },
+    {
+      "module": "coplanar_type2",
+      "count": 1792,
+      "seconds": 68.701
+    },
+    {
+      "module": "quotient_and_labels",
+      "count": 51024,
+      "seconds": 131.537
+    }
+  ],
+  "L": 64,
+  "P": 2128,
+  "N": 48832,
+  "total": 51024,
+  "discrete_count": 47904,
+  "continuous_family_count": 3120,
+  "labels": {
+    "L.0.1": 8,
+    "L.0.2": 56,
+    "P.0": 36,
+    "P.1.1": 252,
+    "P.1.2": 48,
+    "P.2.1": 448,
+    "P.2.2": 1344,
+    "N.0.1": 120,
+    "N.0.2": 840,
+    "N.1.1": 2016,
+    "N.1.2": 384,
+    "N.1.3": 2016,
+    "N.1.4": 12096,
+    "N.1.5": 2688,
+    "N.2.1": 3584,
+    "N.2.2": 10752,
+    "N.2.3": 14336
+  },
+  "discrete_labels": {
+    "L.0.1": 8,
+    "L.0.2": 56,
+    "P.0": 36,
+    "P.1.1": 252,
+    "P.1.2": 0,
+    "P.2.1": 448,
+    "P.2.2": 1344,
+    "N.0.1": 120,
+    "N.0.2": 840,
+    "N.1.1": 2016,
+    "N.1.2": 0,
+    "N.1.3": 2016,
+    "N.1.4": 12096,
+    "N.1.5": 0,
+    "N.2.1": 3584,
+    "N.2.2": 10752,
+    "N.2.3": 14336
+  },
+  "continuous_labels": {
+    "L.0.1": 0,
+    "L.0.2": 0,
+    "P.0": 0,
+    "P.1.1": 0,
+    "P.1.2": 48,
+    "P.2.1": 0,
+    "P.2.2": 0,
+    "N.0.1": 0,
+    "N.0.2": 0,
+    "N.1.1": 0,
+    "N.1.2": 384,
+    "N.1.3": 0,
+    "N.1.4": 0,
+    "N.1.5": 2688,
+    "N.2.1": 0,
+    "N.2.2": 0,
+    "N.2.3": 0
+  }
+}
