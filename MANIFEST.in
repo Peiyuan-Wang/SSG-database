@@ -1,5 +1,5 @@
 include example.py example_labels.py example_xiao_mapping.py
 recursive-include tests *.py
-recursive-include docs *.md *.tex
-recursive-include reference *.md *.txt *.pdf *.zip
-recursive-include audits *.py *.json *.mjs *.md
+recursive-include docs *.md
+include reference/algorithm.md
+recursive-include audits/continuous_branches *.py

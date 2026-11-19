@@ -1,4 +1,0 @@
-Installed library: /tmp/ssg230_install_check/ssg_enumeration/__init__.py
-Implementation fingerprint matches census: 2e03591467f2ed06812bf6db40f03a37c0785afffca9bdcbec2f779f4adb559c
-Centered SG5 recomputed: {'spatial_scope': 'spin_only', 'verified': True, 'spin_charts': 227, 'chart_orbits': 227, 'continuous_chart_orbits': 45, 'labels': {'L.0.1': 2, 'L.0.2': 6, 'N.0.1': 4, 'N.0.2': 12, 'N.1.1': 18, 'N.1.2': 10, 'N.1.3': 18, 'N.1.4': 36, 'N.1.5': 30, 'N.2.1': 12, 'N.2.2': 28, 'N.2.3': 8, 'P.0': 3, 'P.1.1': 9, 'P.1.2': 5, 'P.2.1': 12, 'P.2.2': 14}, 'parameter_relations': 129}
-PASS: installed wheel independently reproduces census results

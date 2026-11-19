@@ -1,4 +1,4 @@
-# 正式名称与程序使用（v0.4.0）
+# 正式名称与程序使用
 
 本版实现 [label 规则 v1.1](label规则.md)。正式名称使用 L/P/N 前缀、完整 Hermann–Mauguin 符号、惯用胞波矢与自旋上标；连续族的参数域属于名称的一部分。原有 17 类类型、短编号和 Xiao 完整编号分别保留，不改变分类等价关系和分类数量。
 
@@ -93,12 +93,8 @@ print(setting["atoms"])  # 每个 HM 原子的完整 Seitz 操作和截面分解
 
 因此这里的唯一性是**固定目录、固定命名版本内**的唯一性。任意合法输入的名称不一定已经是该目录的规范字符串；`to_xiao_label` 接受目录中的规范正式名称，不把任意同构符号字符串直接当成规范名称。
 
-## 5. 验收与表格
+## 5. Xiao ID 对应表
 
-完整对应表位于 `outputs/xiao_mapping/SSGclassify_Xiao_67475.xlsx`，第一列为正式名称，后面保留原来的八列，并增加 LaTeX 名称和 Hall 编号。行数仍为 67,475，包含 8,520 个连续族。L、P、N 数量分别为 1,421、9,542、56,512。
-
-全量迁移由 `audits/naming/build_catalogue.py` 完成，验证记录保存在 `audits/naming/validation.json`。检查涵盖全部图册的精确截面回算、连续相位系数、平移协变及生成元关系、所有类的文本解析与“名称→记录→名称”、名称无重复、旧编号及 Xiao 对应关系不变。生成元与全部截面的乘法边检查给出有限群商的完整关系检验，不靠浮点采样。
-
-这些是命名层面的精确验证；不会将历史 Xiao 对应中使用数值自旋基底求解、两组连续参数检查的结论升级为新的全参数等价证明。原有对应关系的适用范围仍见 [Xiao 对应说明](XIAO_LABEL_MAPPING_ZH.md)。
+可通过上面的查询接口读取全部 67,475 条对应关系。原始工作簿和[对应方法说明](https://github.com/Peiyuan-Wang/SSGclassify/blob/33367de7652fae807f866a85ad495aae92989bb3/docs/XIAO_LABEL_MAPPING_ZH.md)保存在原 SSGclassify 仓库。
 
 参考：[X. Chen et al., PRX 14, 031038 的补充材料，Tables S3–S9](https://journals.aps.org/prx/supplemental/10.1103/PhysRevX.14.031038/newSup_0724_v2.pdf)。
