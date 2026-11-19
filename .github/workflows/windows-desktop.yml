@@ -1,0 +1,77 @@
+name: Windows desktop
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Release containing the SQLite catalogue and pinned core wheel
+        required: true
+permissions:
+  contents: write
+jobs:
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 35
+    env:
+      PYTHONUTF8: '1'
+      RELEASE_TAG: ${{ inputs.release_tag }}
+      SSG_TEST_DATABASE: output/retrieval/SSGclassify.sqlite
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Download the pinned core wheel and database
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          New-Item -ItemType Directory -Force output/retrieval | Out-Null
+          gh release download "$env:RELEASE_TAG" --repo "$env:GITHUB_REPOSITORY" --pattern "SSGclassify.sqlite.gz" --pattern "ssg_enumeration-*-py3-none-any.whl" --pattern "SHA256SUMS-inputs.txt" --dir output/retrieval
+          if ($LASTEXITCODE -ne 0) { throw "Release input download failed" }
+          @'
+          import gzip, hashlib, shutil
+          from pathlib import Path
+          directory = Path('output/retrieval')
+          archive = directory / 'SSGclassify.sqlite.gz'
+          wheel, = directory.glob('ssg_enumeration-*-py3-none-any.whl')
+          hashes = {}
+          for line in (directory / 'SHA256SUMS-inputs.txt').read_text().splitlines():
+              digest, name = line.split(maxsplit=1)
+              hashes[name] = digest
+          for asset in (archive, wheel):
+              with asset.open('rb') as stream:
+                  assert hashlib.file_digest(stream, 'sha256').hexdigest() == hashes[asset.name]
+          with gzip.open(archive, 'rb') as source, (directory / 'SSGclassify.sqlite').open('wb') as target:
+              shutil.copyfileobj(source, target)
+          '@ | python -
+          if ($LASTEXITCODE -ne 0) { throw 'Database extraction or verification failed' }
+      - name: Install pinned desktop build dependencies
+        run: |
+          $wheel = Get-ChildItem output/retrieval -Filter "ssg_enumeration-*-py3-none-any.whl"
+          python -m pip install "$($wheel.FullName)" "." "PySide6-Essentials==6.8.3" "pyinstaller==6.16.0"
+      - name: Test package and Qt interaction
+        run: python -m unittest discover -s tests -v
+      - name: Test Qt interactions at 150 percent scale
+        env:
+          QT_SCALE_FACTOR: '1.5'
+        run: python -m unittest discover -s tests -p "test_desktop*.py" -v
+      - name: Verify uniform formula typography at 150 percent scale
+        env:
+          QT_SCALE_FACTOR: '1.5'
+        run: python -m unittest discover -s tests -p "test_formula_size.py" -v
+      - name: Audit every stored class and vector formula
+        run: python scripts/audit_retrieval.py
+      - name: Build native Windows application
+        run: python scripts/build_windows.py
+      - name: Launch frozen application and verify portable ZIP
+        run: python scripts/verify_windows.py
+      - name: Attach verified Windows files to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $files = @(Get-ChildItem dist/windows -File | ForEach-Object { $_.FullName })
+          if ($files.Count -eq 0) { throw 'Windows build output missing' }
+          gh release upload "$env:RELEASE_TAG" @files --repo "$env:GITHUB_REPOSITORY"
+          if ($LASTEXITCODE -ne 0) { throw 'Release asset upload failed' }

@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.DS_Store
+example_output/
+recomputed_results/
+*.aux
+*.log.tmp
+*.out
+*.toc
+*.synctex.gz
+tmp/
+node_modules/
+node_modules
+*.fdb_latexmk
+*.fls
+*.xdv
+docs/*.log
+*.inspect.ndjson
+
+# Generated desktop application and full database are distributed as Release assets.
+output/retrieval/
