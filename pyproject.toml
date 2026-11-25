@@ -5,12 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ssg-database"
 version = "0.9.18"
-description = "Offline spin space group catalogue, search and desktop application"
+description = "Spin space group enumeration, offline catalogue, search and desktop application"
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = ["ssg-enumeration==0.9.17", "sympy>=1.14,<1.15"]
+dependencies = ["sympy>=1.14,<1.15"]
 
 [project.optional-dependencies]
+enumeration = ["spglib>=2.7,<3"]
 desktop = ["PySide6-Essentials>=6.6,<7"]
 desktop-qt5 = ["PyQt5>=5.15,<6"]
 
@@ -21,7 +22,8 @@ ssgclassify = "ssg_database.desktop:main"
 ssg-build-database = "ssg_database.retrieval:main"
 
 [tool.setuptools]
-packages = ["ssg_database"]
+packages = ["ssg_database", "ssg_enumeration"]
 
 [tool.setuptools.package-data]
 ssg_database = ["data/*.svg", "data/*.md", "data/*.otf", "data/*.txt"]
+ssg_enumeration = ["data/*.json.gz"]

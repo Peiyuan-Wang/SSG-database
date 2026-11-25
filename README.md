@@ -1,18 +1,29 @@
-# Spin Space Group Database
+# Spin Space Group Database and Enumeration
 
-Browse and search 67,475 spin space group entries from 230 parent space groups, including 8,520 continuous families. The catalogue presents the five-level classification, spin and space operations, continuous-parameter matrix evaluation, and data export. See the [user guide](docs/USER_GUIDE.md).
+This repository contains the spin space group enumeration and the offline database for all 230 crystallographic parent space groups. The catalogue has 67,475 entries, including 8,520 continuous families.
 
-Download the standalone macOS or Windows application, or the compressed SQLite catalogue, from [Releases](https://github.com/Peiyuan-Wang/SSG-database/releases). The desktop distributions include the full catalogue and the Python code needed for offline use.
+- `ssg_enumeration` provides exact enumeration, equivalence tests, naming, and Xiao ID correspondence. See the [Python API](docs/API.md), [algorithm notes](docs/ALGORITHM_NOTES_ZH.md), and [naming convention](docs/label规则.md).
+- `ssg_database` provides SQLite import and search, group-operation displays, and the desktop application. See the [user guide](docs/USER_GUIDE.md) and [developer guide](docs/RETRIEVAL_ZH.md).
 
-## Development
+## Downloads
 
-Install the pinned `ssg_enumeration` wheel from the release assets alongside the database package. The wheel is also available from the [SSG Enumeration repository](https://github.com/Peiyuan-Wang/SSG-enumeration), which owns enumeration, exact representations, naming, and Xiao ID correspondence.
+- [Database v0.9.18](https://github.com/Peiyuan-Wang/SSG-database/releases/tag/v0.9.18) contains the standalone macOS and Windows applications, SQLite catalogue, and Python wheels for that release.
+- [Enumeration v0.9.17](https://github.com/Peiyuan-Wang/SSG-database/releases/tag/v0.9.17) contains the standalone enumeration wheel and the exact chart and orbit exports for all 230 parent groups. Those exports are the input for rebuilding SQLite.
+
+## Install from source
+
+Install the checkout in a fresh Python environment. One installation provides both import paths.
 
 ```sh
-python -m pip install /path/to/ssg_enumeration-0.9.17-py3-none-any.whl '.[desktop]'
+python -m pip install '.[enumeration]'
+python example.py
+```
+
+The `enumeration` extra adds `spglib` for loading parent groups by their international number. Install `.[desktop]` for the GUI (or `.[desktop-qt5]` for PyQt5) and point it to the SQLite catalogue from the database release.
+
+```sh
+python -m pip install '.[desktop]'
 python run_desktop.py --database /path/to/SSGclassify.sqlite
 ```
 
-Use `.[desktop-qt5]` to run with PyQt5 or omit the extra for the Python API. Import `SearchDatabase` from `ssg_database`. The standalone builds and the Python API read the same SQLite format.
-
-[Developer guide](docs/RETRIEVAL_ZH.md) covers the catalogue import, tests, and platform builds. The previous combined project is [SSGclassify](https://github.com/Peiyuan-Wang/SSGclassify). This repository was split from commit `33367de7652fae807f866a85ad495aae92989bb3`.
+For tests that use the full database, set `SSG_TEST_DATABASE` to the path to the extracted SQLite file. Run the test suite with `python -m unittest discover -s tests -v`.

@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       release_tag:
-        description: Release containing the SQLite catalogue and pinned core wheel
+        description: Release containing the SQLite catalogue and input checksums
         required: true
 permissions:
   contents: write
@@ -23,34 +23,30 @@ jobs:
         with:
           python-version: '3.12'
           architecture: x64
-      - name: Download the pinned core wheel and database
+      - name: Download and verify the database
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           New-Item -ItemType Directory -Force output/retrieval | Out-Null
-          gh release download "$env:RELEASE_TAG" --repo "$env:GITHUB_REPOSITORY" --pattern "SSGclassify.sqlite.gz" --pattern "ssg_enumeration-*-py3-none-any.whl" --pattern "SHA256SUMS-inputs.txt" --dir output/retrieval
+          gh release download "$env:RELEASE_TAG" --repo "$env:GITHUB_REPOSITORY" --pattern "SSGclassify.sqlite.gz" --pattern "SHA256SUMS-inputs.txt" --dir output/retrieval
           if ($LASTEXITCODE -ne 0) { throw "Release input download failed" }
           @'
           import gzip, hashlib, shutil
           from pathlib import Path
           directory = Path('output/retrieval')
           archive = directory / 'SSGclassify.sqlite.gz'
-          wheel, = directory.glob('ssg_enumeration-*-py3-none-any.whl')
           hashes = {}
           for line in (directory / 'SHA256SUMS-inputs.txt').read_text().splitlines():
               digest, name = line.split(maxsplit=1)
               hashes[name] = digest
-          for asset in (archive, wheel):
-              with asset.open('rb') as stream:
-                  assert hashlib.file_digest(stream, 'sha256').hexdigest() == hashes[asset.name]
+          with archive.open('rb') as stream:
+              assert hashlib.file_digest(stream, 'sha256').hexdigest() == hashes[archive.name]
           with gzip.open(archive, 'rb') as source, (directory / 'SSGclassify.sqlite').open('wb') as target:
               shutil.copyfileobj(source, target)
           '@ | python -
           if ($LASTEXITCODE -ne 0) { throw 'Database extraction or verification failed' }
       - name: Install pinned desktop build dependencies
-        run: |
-          $wheel = Get-ChildItem output/retrieval -Filter "ssg_enumeration-*-py3-none-any.whl"
-          python -m pip install "$($wheel.FullName)" "." "PySide6-Essentials==6.8.3" "pyinstaller==6.16.0"
+        run: python -m pip install ".[enumeration]" "PySide6-Essentials==6.8.3" "pyinstaller==6.16.0"
       - name: Test package and Qt interaction
         run: python -m unittest discover -s tests -v
       - name: Test Qt interactions at 150 percent scale
