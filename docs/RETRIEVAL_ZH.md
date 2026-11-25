@@ -5,7 +5,7 @@ The desktop application uses Qt and a local SQLite database. Its current user do
 ## Run from source
 
 ```bash
-python -m pip install '.[desktop]'
+python -m pip install /path/to/ssg_enumeration-0.9.17-py3-none-any.whl '.[desktop]'
 python run_desktop.py --database output/retrieval/SSGclassify.sqlite
 ```
 
@@ -35,7 +35,7 @@ print(spin_crystal_class('L1.1.1'))
 
 ## Rebuild and verify
 
-Extract the matching `catalogues` archive from the [SSG Enumeration release](https://github.com/Peiyuan-Wang/SSG-database/releases/tag/v0.9.17). Its parent-group exports are the input to the database build below.
+Extract the matching `catalogues` archive from the [SSG Enumeration release](https://github.com/Peiyuan-Wang/SSG-enumeration/releases/tag/v0.9.17). Its parent-group exports are the input to the database build below.
 
 ```bash
 ssg-build-database \
@@ -55,4 +55,4 @@ python -m ssg_database.label_svg \
 
 The build retains TeX/DVI/SVG intermediates, formula verification, source hashes and database audit reports. `scripts/build_desktop.py` builds the macOS application; `scripts/build_windows.py` builds on Windows. The [User Guide](USER_GUIDE.md) states the limitations of continuous-family profiles and joint searches.
 
-Install PyInstaller in the same environment before building a standalone application. The macOS script uses PyQt5 and the Windows script uses PySide6. Supply the SQLite file as `--database`. The Windows GitHub workflow takes a release tag and reads the SQLite archive from that release and builds both modules from the repository checkout.
+Install PyInstaller in the same environment before building a standalone application. The macOS script uses PyQt5 and the Windows script uses PySide6. Supply the SQLite file as `--database`. The Windows GitHub workflow takes a release tag and reads the SQLite archive and pinned core wheel from that release before building and testing the executable.
