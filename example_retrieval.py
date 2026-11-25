@@ -1,8 +1,7 @@
-"""Exact Python queries and spin-crystal calculation, independent of the GUI."""
+"""Read-only spin space group queries without launching the desktop application."""
 from argparse import ArgumentParser
 from pathlib import Path
 from ssg_database.retrieval import SearchDatabase
-from ssg_enumeration.crystal import spin_crystal_class
 
 parser = ArgumentParser(description=__doc__)
 parser.add_argument('database', nargs='?', type=Path,
@@ -15,5 +14,4 @@ for row in result['rows']:
     detail=db.detail(row['id'])
     print('一般参数的核：',detail['crystal']['kernel'])
     break
-print('不依赖数据库的精确计算：',spin_crystal_class('L1.1.1')['q_name'])
 db.close()

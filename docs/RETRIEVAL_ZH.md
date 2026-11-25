@@ -1,8 +1,10 @@
 # Spin Space Group Database: retrieval and development
 
-The desktop application uses Qt and a local SQLite database. Its current user documentation is the English [User Guide](USER_GUIDE.md), including the five-level classification, symbols, field-by-field search behavior, worked examples, continuous families, and group-operation displays. This historical filename is retained so existing links continue to work.
+The desktop application uses Qt and a local SQLite database. Its current user documentation is the English [User Guide](USER_GUIDE.md), including the five-level classification, symbols, field-by-field search behavior, worked examples, continuous families, and group-operation displays.
 
 ## Run from source
+
+Download the supporting Python wheel and SQLite catalogue from the [database release](https://github.com/Peiyuan-Wang/SSG-database/releases/tag/v0.9.18).
 
 ```bash
 python -m pip install /path/to/ssg_enumeration-0.9.17-py3-none-any.whl '.[desktop]'
@@ -15,7 +17,6 @@ Alternatively, install `.[desktop-qt5]`. Qt is only needed by the desktop interf
 
 ```python
 from ssg_database import SearchDatabase
-from ssg_enumeration import spin_crystal_class
 
 db = SearchDatabase('output/retrieval/SSGclassify.sqlite')
 try:
@@ -28,14 +29,13 @@ try:
     print(db.evaluate('N143.5.2', ['1/7']))
 finally:
     db.close()
-print(spin_crystal_class('L1.1.1'))
 ```
 
 `db.children(path)` lists the next classification level. Search `limit` and `offset` control pagination without changing the result count. See `example_retrieval.py` for another example.
 
 ## Rebuild and verify
 
-Extract the matching `catalogues` archive from the [SSG Enumeration release](https://github.com/Peiyuan-Wang/SSG-enumeration/releases/tag/v0.9.17). Its parent-group exports are the input to the database build below.
+To regenerate SQLite, supply the exact chart and orbit exports for the corresponding catalogue version. The source folder contains one compressed JSON file per parent space group. For ordinary use, download the prepared SQLite catalogue from the database release.
 
 ```bash
 ssg-build-database \

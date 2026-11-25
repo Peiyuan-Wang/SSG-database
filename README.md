@@ -6,7 +6,7 @@ Download the standalone macOS or Windows application, or the compressed SQLite c
 
 ## Development
 
-Install the pinned `ssg_enumeration` wheel from the release assets alongside the database package. The wheel is also available from the [SSG Enumeration repository](https://github.com/Peiyuan-Wang/SSG-enumeration), which owns enumeration, exact representations, naming, and Xiao ID correspondence.
+Download the supporting Python wheel from the database release before installing the source checkout.
 
 ```sh
 python -m pip install /path/to/ssg_enumeration-0.9.17-py3-none-any.whl '.[desktop]'
@@ -15,4 +15,4 @@ python run_desktop.py --database /path/to/SSGclassify.sqlite
 
 Use `.[desktop-qt5]` to run with PyQt5 or omit the extra for the Python API. Import `SearchDatabase` from `ssg_database`. The standalone builds and the Python API read the same SQLite format.
 
-[Developer guide](docs/RETRIEVAL_ZH.md) covers the catalogue import, tests, and platform builds. The previous combined project is [SSGclassify](https://github.com/Peiyuan-Wang/SSGclassify). This repository was split from commit `33367de7652fae807f866a85ad495aae92989bb3`.
+[Developer guide](docs/RETRIEVAL_ZH.md) covers the catalogue import, tests, and platform builds.
